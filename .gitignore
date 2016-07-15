@@ -1,4 +1,5 @@
 *.class
 
 interview-test.iml
-.idea
+.idea/
+target/

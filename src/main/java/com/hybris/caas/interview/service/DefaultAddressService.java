@@ -4,6 +4,7 @@ import com.hybris.caas.interview.exceptions.ResourceNotFoundException;
 import com.hybris.caas.interview.model.Address;
 import com.hybris.caas.interview.model.Customer;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,7 +21,7 @@ public class DefaultAddressService implements AddressService {
 
     public List<Address> getAddressBook(String customerId) {
         Customer customer = customerService.getCustomerById(customerId);
-        List<Address> addresses = customer.getAddressBook();
+        List<Address> addresses = new ArrayList<>(customer.getAddressBook());
         return addresses;
     }
 

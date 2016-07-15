@@ -1,5 +1,8 @@
 package com.hybris.caas.interview.model;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 /**
  * @author SAP Hybris YaaS
  */
@@ -66,5 +69,37 @@ public class Address {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Address address = (Address) o;
+
+        return new EqualsBuilder()
+                .append(getId(), address.getId())
+                .append(getStreet(), address.getStreet())
+                .append(getStreetNumber(), address.getStreetNumber())
+                .append(getZipCode(), address.getZipCode())
+                .append(getCity(), address.getCity())
+                .append(getState(), address.getState())
+                .append(getCountry(), address.getCountry())
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+                .append(getId())
+                .append(getStreet())
+                .append(getStreetNumber())
+                .append(getZipCode())
+                .append(getCity())
+                .append(getState())
+                .append(getCountry())
+                .toHashCode();
     }
 }
