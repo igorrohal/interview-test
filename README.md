@@ -13,9 +13,9 @@ When you are done, please get the result to us in one the following ways:
 
 The task is to unit-test a single Java class to demonstrate both your testing and Java skills. The following will be used as the most important metrics:
 
-- tests being runnable and the project compilable
 - fulfilling the task of the class being well unit-tested
 - following best practices and submitting clean and self-explanatory code
+- the result should be a compilable and testable maven Java 8 project
 
 You are allowed to:
 
