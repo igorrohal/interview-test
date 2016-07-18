@@ -24,6 +24,4 @@ You are allowed to:
 
 If you think you found an error in the excercise or could improve it in any way, feel free to make the changes and document them why you did so.
 
-In case any questions pop up which are directly connected to the excercise, please send an email to these 2 addresses:
-igor.rohal@sap.com
-sushil.man.shilpakar@sap.com
+In case any questions pop up which are directly connected to the excercise, please send an email to igor.rohal@sap.com and sushil.man.shilpakar@sap.com
