@@ -6,7 +6,6 @@ import com.hybris.caas.interview.model.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author SAP Hybris YaaS
@@ -39,9 +38,12 @@ public class DefaultAddressService implements AddressService {
      * Finds the address in the customer's address book
      */
     private Address findAddressInAddressBook(List<Address> addressBook, String addressId) {
-        final List<Address> filteredAddresses = addressBook.stream()
-                .filter(a -> a.getId().equals(addressId))
-                .collect(Collectors.toList());
+        final List<Address> filteredAddresses = new ArrayList<>();
+        for(final Address a : addressBook){
+            if(a.getId().equals(addressId)){
+                filteredAddresses.add(a);
+            }
+        }
 
         if (filteredAddresses.size() == 1) {
             return filteredAddresses.get(0);
